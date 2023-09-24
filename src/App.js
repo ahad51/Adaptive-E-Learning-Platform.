@@ -1,10 +1,17 @@
 import logo from './logo.svg';
+import Signup from './Components/Main Components/Signup/Signup';
 import Login from './Components/Main Components/Login/Login';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-     <Login />
+    <Router>
+    <Routes>
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/" element={<Login />} />
+      </Routes>
+      </Router>
   );
 }
 

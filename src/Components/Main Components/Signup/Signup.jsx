@@ -12,9 +12,9 @@ import {Button} from "@mui/material";
 import {  useNavigate } from "react-router-dom";
 
 
-import './Login.css'
+import './Signup.css'
 
-const Login =()=>
+const Signup =()=>
 {
     const [showPassword, setShowPassword] = React.useState(false);
 
@@ -28,22 +28,26 @@ const Login =()=>
 
     const navigation=()=>
     {
-      Navigate("/signup")
+      Navigate("/")
     }
 
   return(
 
     <>
     <div className="background-container">
-        <div className="headingLogin">Login</div>
-    <div className="mainContainer">
+        <div className="headingLogin">Signup</div>
+    <div className="mainContainerSignup">
         <div className="subMainContainerLogin">
         </div>
         <div className="submainContainer">
         <h1 className="login">
-        Login to your Account
+        Create An Account
         </h1>
         <label htmlFor="email" className="field-label">
+          Name
+        </label>
+            <TextField placeholder="Enter you Name" className="textField" id="outlined-basic" variant="outlined" />
+            <label htmlFor="email" className="field-labelEmail">
           Email
         </label>
             <TextField placeholder="Enter you Email" className="textField" id="outlined-basic" variant="outlined" />
@@ -70,12 +74,11 @@ const Login =()=>
             }
           />
         </FormControl>
-        <a className="linkForgot">Forgot Password?</a>
         <div className="buttonContainer">
-        <Button className="authButton">Login</Button>
+        <Button className="authButton">Signup</Button>
         <div>
         <h5 className="bottomHeadingLogin">
-        Don't have an account?  <a onClick={navigation} className="link">Signup Now!</a>
+          <a onClick={navigation} className="linkLogin">Back to Login</a>
         </h5>
         </div>
         </div>
@@ -86,4 +89,4 @@ const Login =()=>
   )
 
 }
-export default Login;
+export default Signup;

@@ -30,6 +30,10 @@ const Login =()=>
     {
       Navigate("/signup")
     }
+    const navigationForget=()=>
+    {
+      Navigate("/forgetpassword")
+    }
 
   return(
 
@@ -70,7 +74,7 @@ const Login =()=>
             }
           />
         </FormControl>
-        <a className="linkForgot">Forgot Password?</a>
+        <a  onClick={navigationForget}className="linkForgot">Forgot Password?</a>
         <div className="buttonContainer">
         <Button className="authButton">Login</Button>
         <div>

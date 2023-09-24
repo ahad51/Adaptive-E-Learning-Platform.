@@ -94,7 +94,7 @@ const ResetPassword =()=>
         <div className="buttonContainer">
         <Button className="authButton">Reset</Button>
         <div style={{paddingTop:"20px"}}>
-          <a onClick={navigation} className="linkLogin">Back to Login</a>
+        <a onClick={navigation} className="linkLogin">Back to Login</a>
         </div>
         </div>
         </div>

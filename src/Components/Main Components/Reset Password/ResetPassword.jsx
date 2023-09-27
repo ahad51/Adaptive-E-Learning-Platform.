@@ -96,6 +96,7 @@ const ResetPassword =()=>
         <div style={{paddingTop:"20px"}}>
         <a onClick={navigation} className="linkLogin">Back to Login</a>
         </div>
+        
         </div>
         </div>
     </div>

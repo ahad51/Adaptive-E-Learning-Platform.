@@ -39,7 +39,6 @@ const ForgetPassword =()=>
         <Button className="authButton">Send Email</Button>
         </div>
         <a onClick={navigation} className="linkForget">Back to Login</a>
-
         </div>
     </div>
     </div>

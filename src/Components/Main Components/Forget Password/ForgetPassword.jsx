@@ -3,15 +3,12 @@ import React,{useState} from "react";
 import { TextField } from "@mui/material";
 import {Button} from "@mui/material";
 import {  useNavigate } from "react-router-dom";
-
+import logo from "../../../assets/images/logo.png"
 
 import './ForgetPassword.css'
 
 const ForgetPassword =()=>
 {
-
-
-
     const Navigate=useNavigate();
 
     const navigation=()=>
@@ -23,6 +20,9 @@ const ForgetPassword =()=>
 
     <>
     <div className="background-container">
+    <div className="imageContainer">
+        <img className="logo" src={logo} />
+      </div>
         <div className="headingLogin">Forget Password</div>
     <div className="mainContainer">
         <div className="subMainContainerLogin">

@@ -10,6 +10,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import {Button} from "@mui/material";
 import {  useNavigate } from "react-router-dom";
+import logo from "../../../assets/images/logo.png"
 
 
 import './Login.css'
@@ -39,7 +40,10 @@ const Login =()=>
 
     <>
     <div className="background-container">
-        <div className="headingLogin">Login</div>
+      <div className="imageContainer">
+        <img className="logo" src={logo} />
+
+      </div>
     <div className="mainContainer">
         <div className="subMainContainerLogin">
         </div>

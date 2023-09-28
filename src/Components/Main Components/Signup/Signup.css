@@ -12,7 +12,7 @@
   {
     width: 60%;
     border: 1px solid yellow;
-    height: 510px;
+    height: 490px;
     display: flex;
   }
   .subMainContainerLogin
@@ -100,7 +100,6 @@ color: white !important;
 .authButton
 {
     background-color:yellow !important;
-    transform: skew(20deg);
     color: black !important;
     width:100%;
     height: 40px;
@@ -160,4 +159,9 @@ color: white !important;
   padding-left: 177px;
   line-height: 0px;
   cursor: pointer;
+}
+.logoSignup
+{
+  width: 80px;
+  height: 70px;
 }

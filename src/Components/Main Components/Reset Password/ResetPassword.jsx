@@ -10,6 +10,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import {Button} from "@mui/material";
 import {  useNavigate } from "react-router-dom";
+import logo from "../../../assets/images/logo.png"
 
 
 import './ResetPassword.css'
@@ -35,6 +36,9 @@ const ResetPassword =()=>
 
     <>
     <div className="background-container">
+    <div className="imageContainer">
+        <img className="logo" src={logo} />
+      </div>
         <div className="headingLogin">Reset Password</div>
     <div className="mainContainerReset">
         <div className="subMainContainerLogin">

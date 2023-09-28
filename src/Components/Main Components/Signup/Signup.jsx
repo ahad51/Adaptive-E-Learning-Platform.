@@ -27,6 +27,7 @@ const Signup =()=>
     const Navigate=useNavigate();
 
     const navigation=()=>
+
     {
       Navigate("/")
     }
@@ -56,6 +57,7 @@ const Signup =()=>
             <TextField placeholder="Enter you Email" className="textField" id="outlined-basic" variant="outlined" />
             <label htmlFor="email" className="field-labelPassword">
             Password
+            
         </label>
             <FormControl sx={{ m: 1, width: '31ch' }} variant="outlined">
           <OutlinedInput

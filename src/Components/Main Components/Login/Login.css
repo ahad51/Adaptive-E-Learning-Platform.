@@ -143,12 +143,15 @@ color: white !important;
 .passwordPlace::placeholder
 {
   color: white !important;
+
 }
+
 .logo
 {
   width: 150px;
   height: 150px;
 }
+
 .imageContainer
 {
   width: 100%;

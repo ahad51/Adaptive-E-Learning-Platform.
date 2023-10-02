@@ -45,7 +45,6 @@ const Signup =()=>
         </div>
         <div className="submainContainer">
         <h1 className="login">
-          
         Create An Account
         </h1>
         <label htmlFor="email" className="field-label">

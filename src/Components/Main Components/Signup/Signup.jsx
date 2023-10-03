@@ -37,6 +37,7 @@ const Signup =()=>
     <>
     <div className="background-container">
     <div className="imageContainer">
+      
         <img className="logoSignup" src={logo} />
       </div>
         <div className="headingLogin">Signup</div>

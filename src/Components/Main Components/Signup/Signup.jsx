@@ -81,6 +81,7 @@ const Signup =()=>
         </FormControl>
         <div className="buttonContainer">
         <Button className="authButton">Signup</Button>
+        
         <div>
         <h5 className="bottomHeadingLogin">
         <a onClick={navigation} className="linkLogin">Back to Login</a>
@@ -89,6 +90,8 @@ const Signup =()=>
         </div>
         </div>
     </div>
+
+
     </div>
     </>
   )

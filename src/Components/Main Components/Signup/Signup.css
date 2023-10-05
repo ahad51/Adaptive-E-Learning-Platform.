@@ -157,11 +157,13 @@ color: white !important;
   color:yellow;
   text-decoration: underline;
   padding-left: 177px;
+  
   line-height: 0px;
   cursor: pointer;
 }
 .logoSignup
 {
   width: 80px;
+
   height: 70px;
 }

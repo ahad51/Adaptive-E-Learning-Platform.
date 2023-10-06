@@ -80,10 +80,6 @@ const Signup =()=>
           />
         </FormControl>
         <div className="buttonContainer">
-
-
-
-        
         <Button className="authButton">Signup</Button>
         <div>
         <h5 className="bottomHeadingLogin">

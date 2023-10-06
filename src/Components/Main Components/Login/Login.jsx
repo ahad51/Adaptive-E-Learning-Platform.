@@ -54,9 +54,6 @@ const Login =()=>
         <div className="submainContainer">
         <h1 className="login">
         Login to your Account
-
-
-        
         </h1>
         <label htmlFor="email" className="field-label">
           Email

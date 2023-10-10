@@ -40,7 +40,6 @@ const Login =()=>
 
 
   return(
-
     <>
     <div className="background-container">
       
@@ -51,16 +50,13 @@ const Login =()=>
     <div className="mainContainer">
         <div className="subMainContainerLogin">
         </div>
-        <div className="submainContainer">
+        <div clasind sName="submainContainer">
         <h1 className="login">
         Login to your Account
         </h1>
         <label htmlFor="email" className="field-label">
           Email
         </label>
-
-
-        
             <TextField placeholder="Enter you Email" className="textField" id="outlined-basic" variant="outlined" />
             <label htmlFor="email" className="field-labelPassword">
             Password

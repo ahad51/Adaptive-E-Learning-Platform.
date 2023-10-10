@@ -45,7 +45,6 @@ const Login =()=>
       
       <div className="imageContainer">
         <img className="logo" src={logo} />
-
       </div>
     <div className="mainContainer">
         <div className="subMainContainerLogin">

@@ -41,6 +41,9 @@ const Signup =()=>
       </div>
         <div className="headingLogin">Signup</div>
     <div className="mainContainerSignup">
+
+
+      
         <div className="subMainContainerLogin">
         </div>
         <div className="submainContainer">

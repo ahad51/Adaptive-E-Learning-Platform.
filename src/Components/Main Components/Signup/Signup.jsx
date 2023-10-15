@@ -45,6 +45,8 @@ const Signup =()=>
         </div>
         <div className="submainContainer">
         <h1 className="login">
+
+
         Create An Account
         </h1>
 
@@ -56,6 +58,8 @@ const Signup =()=>
             <TextField placeholder="Enter you Name" className="textField" id="outlined-basic" variant="outlined" />
             <label htmlFor="email" className="field-labelEmail">
           Email
+
+          
         </label>
             <TextField placeholder="Enter you Email" className="textField" id="outlined-basic" variant="outlined" />
             <label htmlFor="email" className="field-labelPassword">

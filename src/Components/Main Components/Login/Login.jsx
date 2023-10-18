@@ -42,7 +42,6 @@ const Login =()=>
   return(
     <>
     <div className="background-container">
-      
       <div className="imageContainer">
         <img className="logo" src={logo} />
       </div>
@@ -51,6 +50,8 @@ const Login =()=>
         </div>
         <div clasind sName="submainContainer">
         <h1 className="login">
+
+          
         Login to your Account
         </h1>
         <label htmlFor="email" className="field-label">

@@ -47,8 +47,6 @@ const Login =()=>
       </div>
     <div className="mainContainer">
         <div className="subMainContainerLogin">
-
-          
         </div>
         <div clasind sName="submainContainer">
         <h1 className="login">

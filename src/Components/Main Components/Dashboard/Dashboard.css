@@ -1,0 +1,127 @@
+.maincontainerDashboard
+{
+    background-image: url("../../../assets/images/bg-auth.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* Set the desired height for your background */
+}
+.toolbarar
+{
+    background-color: #1b1b1b !important;
+    display:flex ;
+    justify-content: center;
+}
+.drwaer
+{
+    background-color: #1b1b1b !important;
+}
+/* .css-12i7wg6-MuiPaper-root-MuiDrawer-paper
+{
+    background-color: #1b1b1b !important;
+} */
+
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper
+{
+    background-color:#1b1b1b !important;
+}
+.dashboardLogo
+{
+    width: 100px;
+    height: 100px;
+}
+.css-10hburv-MuiTypography-root
+{
+    color: gold;
+}
+.navBar
+{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.logout
+{
+width:50px;
+height: 50px;
+
+}
+.icon
+{
+    width: 30px;
+    height: 30px;
+}
+.mainContainerdash
+{
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+
+    
+}
+.major
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.submainDash
+{
+    background-color:#1b1b1b;
+    width: 30%;
+    height: 170px;
+    border-radius: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.clockicon
+{
+    width:50px;
+    height: 50px;
+}
+.advisor
+{
+    color: lightgray;
+    padding: 0;
+    margin: 0;
+}
+.advisor2
+{
+    color: lightgray;
+    padding-top: 5px;
+    margin: 0;
+}
+.submainsecondash
+{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.donut
+{
+    width:60%;
+    background-color:#1b1b1b;
+    height: 310px;
+    border-radius: 7%;
+}
+.table
+{
+    width:30%;
+    background-color:#1b1b1b;
+    height: 310px;
+    border-radius: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hr
+{
+    color: lightgray !important;
+    width: 80%;
+}

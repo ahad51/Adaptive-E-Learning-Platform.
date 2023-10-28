@@ -39,18 +39,13 @@ const Signup =()=>
     <div className="imageContainer">
         <img className="logoSignup" src={logo} />
       </div>
-        <div className="headingLogin">Signup</div>
     <div className="mainContainerSignup">
         <div className="subMainContainerLogin">
         </div>
         <div className="submainContainer">
         <h1 className="login">
-          
-        Create An Account
-        </h1>
-
-
-        
+        Signup
+        </h1>   
         <label htmlFor="email" className="field-label">
           Name
         </label>
@@ -61,7 +56,6 @@ const Signup =()=>
             <TextField placeholder="Enter you Email" className="textField" id="outlined-basic" variant="outlined" />
             <label htmlFor="email" className="field-labelPassword">
             Password
-            
         </label>
             <FormControl sx={{ m: 1, width: '31ch' }} variant="outlined">
           <OutlinedInput

@@ -41,18 +41,19 @@ const Login =()=>
 
   return(
     <>
-    <div className="background-container">
-      <div className="imageContainer">
-        <img className="logo" src={logo} />
+       <div className="background-container">
+    <div className="imageContainer">
+        <img className="logoSignup" src={logo} />
       </div>
-    <div className="mainContainer">
+    <div className="mainContainerSignup">
         <div className="subMainContainerLogin">
         </div>
-        <div clasind sName="submainContainer">
+        <div className="submainContainer">
         <h1 className="login">
-        Login to your Account
-        </h1>
-        <label htmlFor="email" className="field-label">
+          
+        Login
+        </h1>   
+            <label htmlFor="email" className="field-labelEmail">
           Email
         </label>
             <TextField placeholder="Enter you Email" className="textField" id="outlined-basic" variant="outlined" />
@@ -80,12 +81,14 @@ const Login =()=>
           />
         </FormControl>
         <a  onClick={navigationForget}className="linkForgot">Forgot Password?</a>
-        <div className="buttonContainer">
-        <Button className="authButton">Login</Button>  
 
+        <div className="buttonContainer">
+        <Button className="authButton">Signup</Button>
         <div>
         <h5 className="bottomHeadingLogin">
         Don't have an account?  <a onClick={navigation} className="link">Signup Now!</a>
+        </h5>
+        <h5 className="bottomHeadingLogin">
         </h5>
         </div>
         </div>

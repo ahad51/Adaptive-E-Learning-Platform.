@@ -23,13 +23,12 @@ const ForgetPassword =()=>
     <div className="imageContainer">
         <img className="logo" src={logo} />
       </div>
-        <div className="headingLogin">Forget Password</div>
     <div className="mainContainer">
         <div className="subMainContainerLogin">
         </div>
         <div className="submainContainerForget">
         <h1 className="login">
-        Send Email
+        Forgot Pssword?
         </h1>
         <label htmlFor="email" className="field-label">
           Email

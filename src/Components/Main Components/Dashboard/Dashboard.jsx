@@ -23,6 +23,7 @@ import clock from "../../../assets/images/clock3.png";
 import advisor from "../../../assets/images/advisor.png";
 import books from "../../../assets/images/books.png";
 import { PieChart } from "react-minimal-pie-chart";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -43,6 +44,11 @@ const Dashboard = () => {
   const handleItemClick = (text) => {
     setSelectedItem(text);
   };
+  const navigate=useNavigate()
+  const navigation=()=>
+  {
+  navigate("/")
+  }
 
   return (
     <>
@@ -54,13 +60,14 @@ const Dashboard = () => {
             sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
           >
             <Toolbar className="toolbarar">
-              <Typography variant="h6" noWrap component="div" className="">
                 <div className="navBar">
                   <div>
                     <img src={logo} className="dashboardLogo" alt="Logo" />
                   </div>
                 </div>
-              </Typography>
+                <div>
+                <button onClick={navigation} className="buttonLogout">Logout</button>
+                </div>
             </Toolbar>
           </AppBar>
           <Drawer

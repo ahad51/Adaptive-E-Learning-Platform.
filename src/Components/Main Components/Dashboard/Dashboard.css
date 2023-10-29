@@ -9,7 +9,7 @@
 {
     background-color: #1b1b1b !important;
     display:flex ;
-    justify-content: center;
+    justify-content: space-around;
 }
 .drwaer
 {
@@ -26,8 +26,8 @@
 }
 .dashboardLogo
 {
-    width: 100px;
-    height: 100px;
+    width: 135px;
+    height: 110px;
 }
 .css-10hburv-MuiTypography-root
 {
@@ -87,6 +87,7 @@ height: 50px;
     color: lightgray;
     padding: 0;
     margin: 0;
+    font-size: 20px;
 }
 .advisor2
 {

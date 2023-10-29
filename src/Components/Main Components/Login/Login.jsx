@@ -37,6 +37,10 @@ const Login =()=>
     {
       Navigate("/forgetpassword")
     }
+    const dashNavigation=()=>
+    {
+      Navigate("/courses")
+    }
 
 
   return(
@@ -83,7 +87,7 @@ const Login =()=>
         <a  onClick={navigationForget}className="linkForgot">Forgot Password?</a>
 
         <div className="buttonContainer">
-        <Button className="authButton">Signup</Button>
+        <Button className="authButton" onClick={dashNavigation}>Login</Button>
         <div>
         <h5 className="bottomHeadingLogin">
         Don't have an account?  <a onClick={navigation} className="link">Signup Now!</a>

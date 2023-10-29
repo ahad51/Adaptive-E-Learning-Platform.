@@ -1,0 +1,93 @@
+.mainContainerCourses
+{
+    background-image: url("../../../assets/images/bg-auth.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* Set the desired height for your background */
+}
+.css-4z9bxz-MuiPaper-root
+{
+    background-color: transparent !important ;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected
+{
+    color: lightgrey !important;
+}
+..css-1aquho2-MuiTabs-indicator 
+{
+    background-color: lightgray !important;
+}
+.css-15yhws9-MuiButtonBase-root-MuiTab-root.Mui-selected
+{
+    color: lightgray !important;
+}
+.css-1aquho2-MuiTabs-indicator
+{
+    color: lightgray !important;
+    background-color: lightgray !important;
+}
+.mainContainerTabs
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+.coursesContainer
+{
+    background-color:#1b1b1b;
+    width: 25%;
+    height: 250px;
+    border-bottom-right-radius: 8%;
+    border-bottom-left-radius: 8%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.poster
+{
+   height: 160px;
+   width: 100%;
+
+}
+.majorContainerCourse
+{
+    display: flex;
+    flex-direction: column;
+}
+.greyHead
+{
+    color:lightgray !important;
+    font-size: 19px;
+}
+.navbarcourses
+{
+    height: 10%;
+    background-color: aliceblue;
+    width: 100%;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navLogo
+{
+height: 125px;
+width: 125px;
+padding-left: 20px;
+}
+.buttonLogout
+{
+    background-color: yellow;
+    height: 40px;
+    width: 130px;
+    color: black;
+    border-radius: 10%;
+    border: 1PX SOLID yellow;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}

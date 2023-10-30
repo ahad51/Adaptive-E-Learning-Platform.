@@ -42,7 +42,6 @@ const Login =()=>
       Navigate("/courses")
     }
 
-
   return(
     <>
        <div className="background-container">

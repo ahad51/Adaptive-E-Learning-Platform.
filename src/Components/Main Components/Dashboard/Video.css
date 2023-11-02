@@ -59,3 +59,29 @@ flex-direction: column;
     width:40px;
     height: 40px;
 }
+.calender
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  padding-top: 200px;
+}
+.calenderStyle
+{
+  width: 80% !important;
+  height: 80% !important;
+  background-color:#1b1b1b !important;
+  color:#faaf00 !important;
+}
+.react-calendar__tile {
+color: #faaf00 !important;
+}
+.react-calendar__tile--now {
+background-color:  blue !important  ;
+
+}
+.react-calendar, .react-calendar *, .react-calendar *:before, .react-calendar *:after
+{
+color:  #faaf00 !important;
+}

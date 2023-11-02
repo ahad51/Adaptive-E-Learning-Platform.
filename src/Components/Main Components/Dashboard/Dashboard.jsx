@@ -27,6 +27,7 @@ import { useNavigate } from "react-router-dom";
 import Advisor from"../Dashboard/Advisor";
 import Video from "./Videoes";
 import Quiz from "./Quiz";
+import Calendar from "./Calender";
 
 const drawerWidth = 240;
 
@@ -178,6 +179,9 @@ const Dashboard = () => {
 )}
  {selectedItem === "Quizes" && (
                <Quiz />
+)}
+ {selectedItem === "Schedule" && (
+               <Calendar />
 )}
           </Box>
         </Box>

@@ -24,6 +24,9 @@ import advisor from "../../../assets/images/advisor.png";
 import books from "../../../assets/images/books.png";
 import { PieChart } from "react-minimal-pie-chart";
 import { useNavigate } from "react-router-dom";
+import Advisor from"../Dashboard/Advisor";
+import Video from "./Videoes";
+import Quiz from "./Quiz";
 
 const drawerWidth = 240;
 
@@ -33,7 +36,7 @@ const Dashboard = () => {
   const icons = [
     dashboard,
     dashboard,
-    setting,
+    advisor,
     videos,
     analytics,
     inbox,
@@ -89,11 +92,10 @@ const Dashboard = () => {
                 {[
                   "Dashboard",
                   "Dashboard",
-                  "Settings",
+                  "Advisor",
                   "Videos",
                   "Schedule",
-                  "Inbox",
-                  "Courses",
+                  "Quizes",
                 ].map((text, index) => (
                   <ListItem key={text} disablePadding>
                     <ListItemButton
@@ -168,6 +170,15 @@ const Dashboard = () => {
                 </div>
               </div>
             )}
+             {selectedItem === "Advisor" && (
+                <Advisor />
+)}
+ {selectedItem === "Videos" && (
+               <Video />
+)}
+ {selectedItem === "Quizes" && (
+               <Quiz />
+)}
           </Box>
         </Box>
       </div>

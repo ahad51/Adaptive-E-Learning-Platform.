@@ -77,10 +77,21 @@ height: 50px;
     align-items: center;
     flex-direction: column;
 }
+.submainDashAdvisor
+{
+    background-color:#1b1b1b;
+    width: 30%;
+    height: 200px;
+    border-radius: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .clockicon
 {
-    width:50px;
-    height: 50px;
+    width:80px;
+    height: 80px;
 }
 .advisor
 {
@@ -126,3 +137,18 @@ height: 50px;
     color: lightgray !important;
     width: 80%;
 }
+.advisorButton
+{
+    background-color: #faaf00;
+    color: black;
+    border-radius: 7%;
+    width: 100px;
+    height: 30px;
+    border: none;
+    font-weight: bolder;
+    cursor: pointer;
+    cursor: pointer;
+
+}
+
+  

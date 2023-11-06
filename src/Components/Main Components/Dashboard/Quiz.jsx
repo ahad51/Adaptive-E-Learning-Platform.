@@ -34,10 +34,7 @@ const Quiz=()=>
                   <div className="submainDashVideo">
            <h1 className="advisorQuiz">Completed Quizes</h1>
                     <img src={clock} className="clockicon2" />
-                    <button className="quizProgress">View</button>
-
-                    
-
+                    <button className="quizProgress">View</button>  
                   </div>
                   
                   </div>

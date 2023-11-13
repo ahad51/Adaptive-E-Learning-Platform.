@@ -37,6 +37,8 @@ const Quiz=()=>
                     <button className="quizProgress">View</button>  
                   </div>
                   </div>
+
+                  
                   </div>
         </>
     )

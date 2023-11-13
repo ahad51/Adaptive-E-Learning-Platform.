@@ -36,9 +36,7 @@ const Quiz=()=>
                     <img src={clock} className="clockicon2" />
                     <button className="quizProgress">View</button>  
                   </div>
-                  </div>
-
-                  
+                  </div>    
                   </div>
         </>
     )

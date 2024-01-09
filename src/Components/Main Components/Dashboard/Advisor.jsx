@@ -20,7 +20,6 @@ const Advisor = () => {
     return (
         <div className="mainContainerdash">
             
-            
             {advisorData.map((advisor) => (
                 <div className="submainDashAdvisor" key={advisor.id}>
                     <img src={dp} className="clockicon" />

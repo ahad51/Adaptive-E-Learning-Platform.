@@ -5,6 +5,7 @@ import ResetPassword from './Components/Main Components/Reset Password/ResetPass
 import ForgetPassword from './Components/Main Components/Forget Password/ForgetPassword';
 import Dashboard from './Components/Main Components/Dashboard/Dashboard';
 import Courses from './Components/Main Components/Courses/Courses';
+import Question from './Components/Main Components/QuizQuestion/quizQuestion';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/forgetpassword" element={<ForgetPassword />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/courses" element={<Courses />} />
+      <Route path="/question" element={<Question />} />
       </Routes>
       </Router>
   );

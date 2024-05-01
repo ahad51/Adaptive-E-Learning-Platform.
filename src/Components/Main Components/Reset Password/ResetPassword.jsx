@@ -51,7 +51,7 @@ const ResetPassword =()=>
             <label htmlFor="email" className="field-labelPasswordReset">
             New Password
         </label>
-            <FormControl sx={{ m: 1, width: '31ch' }} variant="outlined">
+            <FormControl sx={{ m: 1, width: '34ch' }} variant="outlined">
           <OutlinedInput
             id="outlined-adornment-password"
             type={showPassword ? 'text' : 'password'}
@@ -75,7 +75,7 @@ const ResetPassword =()=>
         <label htmlFor="email" className="field-labelPasswordReseto">
             Confirm Password
         </label>
-            <FormControl sx={{ m: 1, width: '31ch' }} variant="outlined">
+            <FormControl sx={{ m: 1, width: '34ch' }} variant="outlined">
           <OutlinedInput
             id="outlined-adornment-password"
             type={showPassword ? 'text' : 'password'}

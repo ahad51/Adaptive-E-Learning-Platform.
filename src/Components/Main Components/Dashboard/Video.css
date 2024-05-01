@@ -1,87 +1,79 @@
 .video-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 300px; /* Adjust the height as needed */
-    padding-top: 40px;
-  }
-  
-  video {
-    max-width: 100%;
-    max-height: 100%;
-    border: 2px solid #333; /* Add a border for a stylish look */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
-  }
-  .mainContainerQuiz
-  {
-display: flex;
-flex-direction: column;
-  }
- 
-  .firstContainer
-  {
-    width:100% ;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 60px;
-  }
-  .submainDashVideo
-{
-    background-color:#1b1b1b;
-    width: 35%;
-    height: 250px;
-    border-radius: 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px; /* Adjust the height as needed */
+  padding-top: 40px;
 }
-.advisorQuiz
-{
-    color: lightgray;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.quizProgress
-{
-    background-color: #faaf00;
-    width:250px;
-    height: 40px;
-    margin-top: 20px;
-    border-radius: 10px 10px 10px 10px;
-    border: none;
-    font-size: 18px;
-    font-weight: bolder;
 
+video {
+  max-width: 100%;
+  max-height: 100%;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-.clockicon2
-{
-    width:40px;
-    height: 40px;
+.mainContainerQuiz {
+  display: flex;
+  flex-direction: column;
 }
-.calender
-{
+
+.firstContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+.submainDashVideo {
+  background-color: #1b1b1b;
+  width: 35%;
+  height: 200px !important;
+  border-radius: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.advisorQuiz {
+  color: lightgray;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.quizProgress {
+  background-color: #faaf00;
+  width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 10px 10px 10px 10px;
+  border: none;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.clockicon2 {
+  width: 40px;
+  height: 40px;
+}
+.calender {
   display: flex;
   justify-content: center;
   align-items: center;
   align-items: center;
   padding-top: 200px;
 }
-.calenderStyle
-{
+.calenderStyle {
   width: 80% !important;
   height: 80% !important;
-  background-color:#1b1b1b !important;
-  color:#faaf00 !important;
+  background-color: #1b1b1b !important;
+  color: #faaf00 !important;
 }
 .react-calendar__tile {
-color: #faaf00 !important;
+  color: #faaf00 !important;
 }
 .react-calendar__tile--now {
-background-color:  blue !important  ;
-
+  background-color: blue !important  ;
 }
-.react-calendar, .react-calendar *, .react-calendar *:before, .react-calendar *:after
-{
-color:  #faaf00 !important;
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  color: #faaf00 !important;
 }

@@ -24,7 +24,7 @@ import advisor from "../../../assets/images/advisor.png";
 import books from "../../../assets/images/books.png";
 import { PieChart } from "react-minimal-pie-chart";
 import { useNavigate } from "react-router-dom";
-import Advisor from"../Dashboard/Advisor";
+import Advisor from "../Dashboard/Advisor";
 import Video from "./Videoes";
 import Quiz from "./Quiz";
 import Calendar from "./Calender";
@@ -48,11 +48,10 @@ const Dashboard = () => {
   const handleItemClick = (text) => {
     setSelectedItem(text);
   };
-  const navigate=useNavigate()
-  const navigation=()=>
-  {
-  navigate("/")
-  }
+  const navigate = useNavigate();
+  const navigation = () => {
+    navigate("/");
+  };
 
   return (
     <>
@@ -64,14 +63,16 @@ const Dashboard = () => {
             sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
           >
             <Toolbar className="toolbarar">
-                <div className="navBar">
-                  <div>
-                    <img src={logo} className="dashboardLogo" alt="Logo" />
-                  </div>
-                </div>
+              <div className="navBar">
                 <div>
-                <button onClick={navigation} className="buttonLogout">Logout</button>
+                  <img src={logo} className="dashboardLogo" alt="Logo" />
                 </div>
+              </div>
+              <div>
+                <button onClick={navigation} className="buttonLogout">
+                  Logout
+                </button>
+              </div>
             </Toolbar>
           </AppBar>
           <Drawer
@@ -95,7 +96,6 @@ const Dashboard = () => {
                   "Dashboard",
                   "Advisor",
                   "Videos",
-                  "Schedule",
                   "Quizes",
                 ].map((text, index) => (
                   <ListItem key={text} disablePadding>
@@ -171,18 +171,10 @@ const Dashboard = () => {
                 </div>
               </div>
             )}
-             {selectedItem === "Advisor" && (
-                <Advisor />
-)}
- {selectedItem === "Videos" && (
-               <Video />
-)}
- {selectedItem === "Quizes" && (
-               <Quiz />
-)}
- {selectedItem === "Schedule" && (
-               <Calendar />
-)}
+            {selectedItem === "Advisor" && <Advisor />}
+            {selectedItem === "Videos" && <Video />}
+            {selectedItem === "Quizes" && <Quiz />}
+            {selectedItem === "Schedule" && <Calendar />}
           </Box>
         </Box>
       </div>

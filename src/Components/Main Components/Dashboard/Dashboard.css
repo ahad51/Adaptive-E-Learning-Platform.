@@ -1,154 +1,138 @@
-.maincontainerDashboard
-{
-    background-image: url("../../../assets/images/bg-auth.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh; /* Set the desired height for your background */
+.maincontainerDashboard {
+  background-image: url("../../../assets/images/bg-auth.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; /* Set the desired height for your background */
 }
-.toolbarar
-{
-    background-color: #1b1b1b !important;
-    display:flex ;
-    justify-content: space-around;
+.toolbarar {
+  background-color: #1b1b1b !important;
+  display: flex;
+  justify-content: space-around;
 }
-.drwaer
-{
-    background-color: #1b1b1b !important;
+.drwaer {
+  background-color: #1b1b1b !important;
 }
 /* .css-12i7wg6-MuiPaper-root-MuiDrawer-paper
 {
     background-color: #1b1b1b !important;
 } */
 
-.css-12i7wg6-MuiPaper-root-MuiDrawer-paper
-{
-    background-color:#1b1b1b !important;
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  background-color: #1b1b1b !important;
 }
-.dashboardLogo
-{
-    width: 135px;
-    height: 110px;
+.dashboardLogo {
+  width: 135px;
+  height: 110px;
 }
-.css-10hburv-MuiTypography-root
-{
-    color: gold;
+.css-10hburv-MuiTypography-root {
+  color: gold;
 }
-.navBar
-{
-    
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+.navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
-.logout
-{
-width:50px;
-height: 50px;
-
+.logout {
+  width: 50px;
+  height: 50px;
 }
-.icon
-{
-    width: 30px;
-    height: 30px;
+.icon {
+  width: 30px;
+  height: 30px;
 }
-.mainContainerdash
-{
-    width: 100%;
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-around;
-
-    
+.mainContainerdash {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
 }
-.major
-{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.major {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.submainDash
-{
-    background-color:#1b1b1b;
-    width: 30%;
-    height: 170px;
-    border-radius: 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.submainDash {
+  background-color: #1b1b1b;
+  width: 30%;
+  height: 170px;
+  border-radius: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.submainDashAdvisor
-{
-    background-color:#1b1b1b;
-    width: 30%;
-    height: 200px;
-    border-radius: 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.submainDashAdvisor {
+  background-color: #1b1b1b;
+  width: 30%;
+  height: 200px;
+  border-radius: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.clockicon
-{
-    width:80px;
-    height: 80px;
+.clockicon {
+  width: 80px;
+  height: 80px;
 }
-.advisor
-{
-    color: lightgray;
-    padding: 0;
-    margin: 0;
-    font-size: 20px;
+.advisor {
+  color: lightgray;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
 }
-.advisor2
-{
-    color: lightgray;
-    padding-top: 5px;
-    margin: 0;
+.advisor2 {
+  color: lightgray;
+  padding-top: 5px;
+  margin: 0;
 }
-.submainsecondash
-{
-    width: 100%;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.submainsecondash {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.donut
-{
-    width:60%;
-    background-color:#1b1b1b;
-    height: 310px;
-    border-radius: 7%;
+.donut {
+  width: 60%;
+  background-color: #1b1b1b;
+  height: 310px;
+  border-radius: 7%;
 }
-.table
-{
-    width:30%;
-    background-color:#1b1b1b;
-    height: 310px;
-    border-radius: 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.table {
+  width: 30%;
+  background-color: #1b1b1b;
+  height: 310px;
+  border-radius: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.hr
-{
-    color: lightgray !important;
-    width: 80%;
+.hr {
+  color: lightgray !important;
+  width: 80%;
 }
-.advisorButton
-{
-    background-color: #faaf00;
-    color: black;
-    border-radius: 7%;
-    width: 100px;
-    height: 30px;
-    border: none;
-    font-weight: bolder;
-    cursor: pointer;
-    cursor: pointer;
-
+.advisorButton {
+  background-color: #faaf00;
+  color: black;
+  border-radius: 7%;
+  width: 100px;
+  height: 30px;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+  cursor: pointer;
 }
 
-  
+.mainContainerdash {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.submainDashAdvisor {
+  width: 30%; /* Adjust as needed */
+  margin: 10px; /* Adjust as needed */
+  text-align: center;
+}

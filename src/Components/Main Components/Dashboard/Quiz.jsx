@@ -1,44 +1,63 @@
 import React from "react";
-import "./Video.css"
-import clock from "../../../assets/images/quiz1.png";
-import quiz from "../../../assets/images/quiz4.png";
-import loading from "../../../assets/images/quiz3.png";
-import not from "../../../assets/images/due.png";
 
+const questionsData = [
+  {
+    id: 1,
+    questionText: "What is the capital of France?",
+    options: ["Paris", "Rome", "Berlin", "Madrid"],
+  },
+  {
+    id: 2,
+    questionText: "What is the largest mammal?",
+    options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+  },
+  {
+    id: 2,
+    questionText: "What is the largest mammal?",
+    options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+  },
+  {
+    id: 2,
+    questionText: "What is the largest mammal?",
+    options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+  },
+  {
+    id: 2,
+    questionText: "What is the largest mammal?",
+    options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+  },
+  {
+    id: 2,
+    questionText: "What is the largest mammal?",
+    options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+  },
+  {
+    id: 2,
+    questionText: "What is the largest mammal?",
+    options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+  },
+];
 
-const Quiz=()=>
-{
-    return(
-        <>
-        <div className="mainContainerQuiz">
-            <div className="firstContainer">
-           <div className="submainDashVideo">
-           <h1 className="advisorQuiz">All Quizes</h1>
-                    <img src={quiz} className="clockicon2" />
-                    <button className="quizProgress">View</button>
-                  </div>
-                  <div className="submainDashVideo">
-                  <h1 className="advisorQuiz">Due Quizes</h1>
-                    <img src={not} className="clockicon2" />
-                    <button className="quizProgress">View</button>
+const Quiz = () => {
+  return (
+    <div>
+      <h1 className="quizHeading">Quiz</h1>
+      {questionsData.map((question) => (
+        <div key={question.id} className="quizQuestionContainer">
+          <h2 className="questionText">{question.questionText}</h2>
+          <div className="optionsContainer">
+            {question.options.map((option, index) => (
+              <label key={index} className="option">
+                <input type="radio" name={`question${question.id}`} />
+                {option}
+              </label>
+            ))}
+          </div>
+          <button className="submitBtn">Submit</button>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-                  </div>        
-                  </div>
-                  <div className="firstContainer">
-           <div className="submainDashVideo">
-           <h1 className="advisorQuiz">In Progress Quizes</h1>
-                    <img src={loading} className="clockicon2" />
-                    <button className="quizProgress">View</button>
-
-                  </div>
-                  <div className="submainDashVideo">
-           <h1 className="advisorQuiz">Completed Quizes</h1>
-                    <img src={clock} className="clockicon2" />
-                    <button className="quizProgress">View</button>  
-                  </div>
-                  </div>    
-                  </div>
-        </>
-    )
-}
 export default Quiz;

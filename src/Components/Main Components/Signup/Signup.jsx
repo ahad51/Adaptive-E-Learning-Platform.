@@ -62,7 +62,7 @@ const Signup = () => {
             <label htmlFor="email" className="field-labelPassword">
               Password
             </label>
-            <FormControl sx={{ m: 1, width: "34ch" }} variant="outlined">
+            <FormControl sx={{ m: 1, width: "70%" }} variant="outlined">
               <OutlinedInput
                 id="outlined-adornment-password"
                 type={showPassword ? "text" : "password"}

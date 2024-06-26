@@ -3,7 +3,6 @@ import { TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import OutlinedInput from "@mui/material/OutlinedInput";
-
 import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
@@ -60,7 +59,7 @@ const Login = () => {
             <label htmlFor="email" className="field-labelPassword">
               Password
             </label>
-            <FormControl sx={{ m: 1, width: "35ch" }} variant="outlined">
+            <FormControl sx={{ m: 1, width: "70%" }} variant="outlined">
               <OutlinedInput
                 id="outlined-adornment-password"
                 type={showPassword ? "text" : "password"}

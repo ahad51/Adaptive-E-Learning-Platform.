@@ -3,6 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; /* Set the desired height for your background */
+  overflow-y: scroll;
 }
 .toolbarar {
   background-color: #1b1b1b !important;

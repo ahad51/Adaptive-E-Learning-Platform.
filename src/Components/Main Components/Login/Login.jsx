@@ -1,61 +1,94 @@
 import React, { useState } from "react";
-import { TextField } from "@mui/material";
-import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import InputLabel from "@mui/material/InputLabel";
-import InputAdornment from "@mui/material/InputAdornment";
-import FormControl from "@mui/material/FormControl";
+
+import { TextField, Box, IconButton, OutlinedInput, InputLabel, InputAdornment, FormControl, Button } from "@mui/material";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
+import { Url } from "../../../utils/apiUrls";
+import { postApiWithoutAuth } from "../../../utils/api";
+import { setToken } from "../../../utils/localstorage";
 
 import "./Login.css";
 
 const Login = () => {
-  const [showPassword, setShowPassword] = React.useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [errorText, setErrorText] = useState('');
+  const [userData, setUserData] = useState({ email: '', password: '' });
+  const navigate = useNavigate();
+
+  const emailRegex = /^([+\w-]+(?:\.[+\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+
+  const handleOnChange = (event) => {
+    const { name, value } = event.target;
+    setUserData({ ...userData, [name]: value });
+    if (name === 'email') {
+      if (value.match(emailRegex)) {
+        setErrorText('');
+      } else {
+        setErrorText('Invalid email format');
+      }
+    }
+  };
+
+  const postData = async () => {
+    console.log('User Data:', userData);
+    try {
+      const response = await postApiWithoutAuth(Url.LOGIN_URL, userData);
+      console.log("Response:", response);
+
+      if (response.success) {
+        navigate('/courses');
+        const { data: { is_active, access_token } } = response.data;
+        
+
+        if (is_active) {
+          setToken(access_token);
+        }
+      } else {
+        console.log('API call failed:', response.message);
+      }
+    } catch (error) {
+      console.log('Error during API call:', error);
+    }
+  };
+  const navigation=()=>
+    {
+      navigate("/signup")
+    }
+    const navigationForget=()=>
+      {
+        navigate('/forgetpassword')
+      }
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const handleMouseDownPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
+  const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
 
-  const Navigate = useNavigate();
-
-  const navigation = () => {
-    Navigate("/signup");
-  };
-  const navigationForget = () => {
-    Navigate("/forgetpassword");
-  };
-  const dashNavigation = () => {
-    Navigate("/courses");
+  const navigateTo = (path) => () => {
+    navigate(path);
   };
 
   return (
-    <>
-      <div className="background-container">
-        <div className="imageContainer">
-          <img className="logoSignup" src={logo} />
-        </div>
-        <div className="mainContainerSignup">
-          <div className="subMainContainerLogin"></div>
-          <div className="submainContainer">
-            <h1 className="login">Login</h1>
-            <label htmlFor="email" className="field-labelEmail">
-              Email
-            </label>
-            <TextField
-              placeholder="Enter you Email"
-              className="textField"
-              id="outlined-basic"
-              variant="outlined"
-            />
+    <div className="background-container">
+      <div className="imageContainer">
+        <img className="logoSignup" src={logo} alt="Logo" />
+      </div>
+      <div className="mainContainerSignup">
+        <div className="subMainContainerLogin"></div>
+        <div className="submainContainer">
+          <h1 className="login">Login</h1>
+          <label htmlFor="email" className="field-labelEmail">Email</label>
+          <TextField
+            name="email"
+            placeholder="Enter your Email"
+            className="textField"
+            variant="outlined"
+            onChange={handleOnChange}
+          />
+        
             <label htmlFor="email" className="field-labelPassword">
               Password
             </label>
@@ -84,7 +117,7 @@ const Login = () => {
             </a>
 
             <div className="buttonContainer">
-              <Button className="authButton" onClick={dashNavigation}>
+              <Button className="authButton" onClick={postData}>
                 Login
               </Button>
               <div>
@@ -96,11 +129,13 @@ const Login = () => {
                 </h5>
                 <h5 className="bottomHeadingLogin"></h5>
               </div>
+
             </div>
           </div>
         </div>
       </div>
-    </>
+
   );
 };
+
 export default Login;

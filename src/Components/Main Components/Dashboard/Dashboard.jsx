@@ -89,10 +89,9 @@ const Dashboard = () => {
             }}
           >
             <Toolbar />
-            <Box sx={{ overflow: "auto" }}>
+            <Box sx={{ overflow: "auto", paddingTop: "30px" }}>
               <List>
                 {[
-                  "Dashboard",
                   "Dashboard",
                   "Advisor",
                   "Videos",

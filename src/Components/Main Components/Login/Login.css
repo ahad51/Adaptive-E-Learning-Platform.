@@ -2,7 +2,7 @@
     background-image: url("../../../assets//images/bg-auth.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh; /* Set the desired height for your background */
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,6 @@
   .mainContainer
   {
     width: 60%;
-      
     border: 1px solid yellow;
     height: 420px;
     display: flex;
@@ -45,7 +44,7 @@
   {
     width: 70%;
     border:yellow !important;
-    color: white    ;
+    color: white;
   }
   .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
     border: 1px solid yellow !important;
@@ -72,14 +71,11 @@
     line-height: 16px;
     padding-right: 240px;
   }
+
   .field-labelPassword {
     font-family: "Cairo Medium";
     color: #fff;
     font-size: 18px;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    line-height: 16px;
-    padding-right: 220px;
   }
   .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
     border: 1px solid yellow;
@@ -116,7 +112,7 @@ color: white !important;
 .bottomHeadingLogin
 {
   font-size: 16px;
-  color: #1b1b1b;
+  color: white !important;
 }
 .link
 {

@@ -94,6 +94,7 @@ const Courses = () => {
 
       {value === 0 && (
         <div className="majorContainerCourse">
+          <center>
           <div className="mainContainerTabs">
             {courseData.map((course) => (
               <div key={course.id} className="coursesContainer">
@@ -113,10 +114,13 @@ const Courses = () => {
               </div>
             ))}
           </div>
+           </center>
         </div>
       )}
 
       {value === 1 && (
+        <div className="majorContainerCourse">
+        <center>
         <div onClick={dashNavigate} className="mainContainerTabs">
           {enrolledCourses.map((course) => (
             <div key={course.id} className="coursesContainer">
@@ -129,6 +133,8 @@ const Courses = () => {
               <p className="duration">{course.duration}</p>
             </div>
           ))}
+        </div>
+        </center>
         </div>
       )}
     </div>

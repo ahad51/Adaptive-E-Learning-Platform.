@@ -113,7 +113,7 @@ const Signup = () => {
                       onClick={handleClickShowPassword}
                       onMouseDown={handleMouseDownPassword}
                       edge="end"
-                      className="passwordPlace"
+                      className="passwordPlace" 
                     >
                       {showPassword ? <VisibilityOff /> : <Visibility />}
                     </IconButton>

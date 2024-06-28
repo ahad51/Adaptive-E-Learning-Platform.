@@ -7,6 +7,7 @@ import logo from "../../../assets/images/logo.png";
 import { Url } from "../../../utils/apiUrls";
 import { postApiWithoutAuth } from "../../../utils/api";
 import { setToken } from "../../../utils/localstorage";
+import { useSnackbar } from "notistack";
 
 import "./Login.css";
 
@@ -15,6 +16,8 @@ const Login = () => {
   const [errorText, setErrorText] = useState('');
   const [userData, setUserData] = useState({ email: '', password: '' });
   const navigate = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
+
 
   const emailRegex = /^([+\w-]+(?:\.[+\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 
@@ -38,6 +41,13 @@ const Login = () => {
 
       if (response.success) {
         navigate('/courses');
+        enqueueSnackbar(('Login Successfully'), {
+          anchorOrigin: {
+              horizontal: 'right',
+              vertical: 'top',
+          },
+          variant: 'success',
+      });
         const { data: { is_active, access_token } } = response.data;
         
         if (is_active) {
@@ -45,6 +55,13 @@ const Login = () => {
         }
       } else {
         console.log('API call failed:', response.message);
+        enqueueSnackbar(('Invalid Cridentials'), {
+          anchorOrigin: {
+              horizontal: 'right',
+              vertical: 'top',
+          },
+          variant: 'error',
+      });
       }
     } catch (error) {
       console.log('Error during API call:', error);

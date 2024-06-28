@@ -56,7 +56,7 @@ const Courses = () => {
     navigate("/quiz");
   };
   const logout = () => {
-    navigate("/quiz");
+    navigate("/");
   };
 
   const dashboard = () => {

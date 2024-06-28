@@ -53,9 +53,10 @@ const Quiz = () => {
               </label>
             ))}
           </div>
-          <button className="submitBtn">Submit</button>
         </div>
       ))}
+          <button className="submitBtn">Submit</button>
+
     </div>
   );
 };

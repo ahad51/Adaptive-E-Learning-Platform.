@@ -53,14 +53,14 @@ const Courses = () => {
   };
 
   const dashNavigate = () => {
-    navigate("/dashboard");
+    navigate("/quiz");
   };
   const logout = () => {
-    navigate("/");
+    navigate("/quiz");
   };
 
   const dashboard = () => {
-    navigate("/dashboard");
+    navigate("/quiz");
   };
 
   const enrollCourse = (courseId) => {

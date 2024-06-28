@@ -14,10 +14,7 @@
 .drwaer {
   background-color: #1b1b1b !important;
 }
-/* .css-12i7wg6-MuiPaper-root-MuiDrawer-paper
-{
-    background-color: #1b1b1b !important;
-} */
+
 
 .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
   background-color: #1b1b1b !important;
@@ -48,6 +45,17 @@
   display: flex;
   justify-content: space-around;
 }
+.mainContainerdashh {
+  background-image: url("../../../assets/images/bg-auth.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+   
+}
+
 .major {
   width: 100%;
   display: flex;

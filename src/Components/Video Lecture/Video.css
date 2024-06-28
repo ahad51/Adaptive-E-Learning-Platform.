@@ -1,0 +1,40 @@
+.mainContainerVideo{
+    width: 100%;
+    /* height: 90vh; */
+    margin-top: 70px;
+    background-color: black;
+}
+.toolbarar {
+    background-color: #1b1b1b !important;
+    display: flex;
+    justify-content: space-around;
+    height: 70px !important;
+  }
+  .drwaer {
+    background-color: #1b1b1b !important;
+  }
+  
+  
+  .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    background-color: #1b1b1b !important;
+  }
+  .dashboardLogo {
+    width: 135px;
+    height: 110px;
+  }
+  .css-10hburv-MuiTypography-root {
+    color: gold;
+  }
+  .navBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .logout {
+    width: 50px;
+    height: 50px;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }

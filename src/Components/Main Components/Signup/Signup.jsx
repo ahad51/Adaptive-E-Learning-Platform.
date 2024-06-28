@@ -14,12 +14,15 @@ import { setToken } from "../../../utils/localstorage";
 import logo from "../../../assets/images/logo.png";
 import { postApiWithoutAuth } from "../../../utils/api";
 import { Url } from "../../../utils/apiUrls";
+import { useSnackbar } from "notistack";
+
 
 import "./Signup.css";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   const [userData, setUserData] = useState({ email: '', password: '',username:'' });
+  const { enqueueSnackbar } = useSnackbar();
 
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -49,6 +52,13 @@ const Signup = () => {
 
       if (response.success) {
         Navigate('/');
+        enqueueSnackbar(('Signup Successfully'), {
+          anchorOrigin: {
+              horizontal: 'right',
+              vertical: 'top',
+          },
+          variant: 'success',
+      });
         const { data: { is_active, access_token } } = response.data;
         
 
@@ -57,6 +67,13 @@ const Signup = () => {
         }
       } else {
         console.log('API call failed:', response.message);
+        enqueueSnackbar(('Email Already Exsist'), {
+          anchorOrigin: {
+              horizontal: 'right',
+              vertical: 'top',
+          },
+          variant: 'error',
+      });
       }
     } catch (error) {
       console.log('Error during API call:', error);

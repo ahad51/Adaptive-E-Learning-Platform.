@@ -4,9 +4,11 @@ import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
 import dp from "../../assets/images/profile.png";
+import { useNavigate } from "react-router-dom";
 
 const Advisor = () => {
   const [value, setValue] = useState(4);
+  const navigate=useNavigate();
 
   // Sample data array containing advisor information
   const advisorData = [
@@ -18,11 +20,17 @@ const Advisor = () => {
     { id: 1, name: "Ahad" },
 
   ];
+  const navigation=()=>
+    {
+      navigate('/dashboard')
+    }
 
   return (
     <>
     <div className="mainContainerdashh">
     <h1 className="quizHeading">Advisor's List</h1>
+    <button onClick={navigation} className="advisorButton">Dashboard</button>
+
     <div className="mainContainerdash">
       {advisorData.map((advisor) => (
         <div className="submainDashAdvisor" key={advisor.id}>

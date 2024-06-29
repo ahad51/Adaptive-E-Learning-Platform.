@@ -13,6 +13,9 @@ const Video = () => {
   const navigation = () => {
     navigate("/");
   };
+  const navigationAdvisor = () => {
+    navigate("/advisor");
+  };
   return (
     <>
           <AppBar
@@ -25,14 +28,20 @@ const Video = () => {
                 </div>
               </div>
               <div>
-                <button onClick={navigation} className="buttonLogout">
-                  Logout
+              <button onClick={navigation} className="buttonLogout">
+              Logout
                 </button>
               </div>
             </Toolbar>
           </AppBar>
     <div className="mainContainerVideo">
+      <div style={{paddingTop:"10px"}}>
+    <button onClick={navigationAdvisor} className="buttonLogout">
+      Advisor
+      </button>
+      </div>
     <div className="video-container">
+
       <video controls>
         <source
         src={video} type="video/webm"

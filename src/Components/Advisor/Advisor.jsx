@@ -22,14 +22,15 @@ const Advisor = () => {
   ];
   const navigation=()=>
     {
-      navigate('/dashboard')
+      navigate('/video')
     }
 
   return (
     <>
     <div className="mainContainerdashh">
     <h1 className="quizHeading">Advisor's List</h1>
-    <button onClick={navigation} className="advisorButton">Dashboard</button>
+    <button onClick={navigation} className="advisorButton">Vidoe</button> 
+
 
     <div className="mainContainerdash">
       {advisorData.map((advisor) => (
@@ -50,7 +51,7 @@ const Advisor = () => {
             />
           </Box>
           <button className="advisorButton">Connect</button>
-        </div>
+          </div>
       ))}
     </div>
     </div>

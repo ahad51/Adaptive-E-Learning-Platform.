@@ -26,7 +26,6 @@ import { PieChart } from "react-minimal-pie-chart";
 import { useNavigate } from "react-router-dom";
 import Advisor from "../Dashboard/Advisor";
 import Video from "./Videoes";
-import Quiz from "./Quiz";
 import Calendar from "./Calender";
 
 const drawerWidth = 240;
@@ -95,7 +94,6 @@ const Dashboard = () => {
                   "Dashboard",
                   "Advisor",
                   "Videos",
-                  "Quizes",
                 ].map((text, index) => (
                   <ListItem key={text} disablePadding>
                     <ListItemButton
@@ -172,7 +170,6 @@ const Dashboard = () => {
             )}
             {selectedItem === "Advisor" && <Advisor />}
             {selectedItem === "Videos" && <Video />}
-            {selectedItem === "Quizes" && <Quiz />}
             {selectedItem === "Schedule" && <Calendar />}
           </Box>
         </Box>

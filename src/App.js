@@ -11,6 +11,10 @@ import './App.css';
 import Quiz from './Components/Quiz/Quiz';
 import Video from './Components/Video Lecture/Video';
 import Advisor from './Components/Advisor/Advisor';
+import AdvisorDashboard from "./Components/Main Components/AdvisorDashboard/AdvisorDashboard"
+import AdvisorSts from "./Components/Main Components/AdvisorDashboard/AdvisorSts"
+
+
 function App() {
   
   return (
@@ -26,6 +30,8 @@ function App() {
       <Route path="/quiz" element={<Quiz />} />
       <Route path="/video" element={<Video/>} />
       <Route path="/advisor" element={<Advisor/>} />
+      <Route path="/advisorDashboard" element={<AdvisorDashboard/>} />
+      <Route path="/advisorSts" element={<AdvisorSts/>} />
       </Routes>
       </Router>
   );

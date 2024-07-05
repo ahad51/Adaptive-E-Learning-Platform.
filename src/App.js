@@ -13,6 +13,7 @@ import Video from './Components/Video Lecture/Video';
 import Advisor from './Components/Advisor/Advisor';
 import AdvisorDashboard from "./Components/Main Components/AdvisorDashboard/AdvisorDashboard"
 import AdvisorSts from "./Components/Main Components/AdvisorDashboard/AdvisorSts"
+import AdvisorLogin from './Components/Main Components/AdvisorLogin/AdvisorLogin';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <Route path="/advisor" element={<Advisor/>} />
       <Route path="/advisorDashboard" element={<AdvisorDashboard/>} />
       <Route path="/advisorSts" element={<AdvisorSts/>} />
+      <Route path="/advisorLogin" element={<AdvisorLogin/>} />
       </Routes>
       </Router>
   );

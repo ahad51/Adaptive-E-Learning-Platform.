@@ -1,0 +1,153 @@
+.maincontainerDashboard {
+  background-image: url("../../../assets/images/bg-auth.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; /* Set the desired height for your background */
+  overflow-y: scroll;
+}
+.toolbarar {
+  background-color: #1b1b1b !important;
+  display: flex;
+  justify-content: space-around;
+  height: 70px !important;
+}
+.drwaer {
+  background-color: #1b1b1b !important;
+}
+
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  background-color: #1b1b1b !important;
+}
+.dashboardLogo {
+  width: 135px;
+  height: 110px;
+}
+.css-10hburv-MuiTypography-root {
+  color: gold;
+}
+.navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.logout {
+  width: 50px;
+  height: 50px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.mainContainerdash {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.mainContainerdashh {
+  background-image: url("../../../assets/images/bg-auth.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.major {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.submainDash {
+  background-color: #1b1b1b;
+  width: 30%;
+  height: 170px;
+  border-radius: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.submainDashAdvisor {
+  background-color: #1b1b1b;
+  width: 30%;
+  height: 200px;
+  border-radius: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.clockicon {
+  width: 80px;
+  height: 80px;
+}
+.advisor {
+  color: lightgray;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+.advisor2 {
+  color: lightgray;
+  padding-top: 5px;
+  margin: 0;
+}
+.submainsecondash {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.donut {
+  width: 60%;
+  background-color: #1b1b1b;
+  height: 310px;
+  border-radius: 7%;
+}
+.table {
+  width: 30%;
+  background-color: #1b1b1b;
+  height: 310px;
+  border-radius: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hr {
+  color: lightgray !important;
+  width: 80%;
+}
+.advisorButton {
+  background-color: #faaf00;
+  color: black;
+  border-radius: 7%;
+  width: 100px;
+  height: 30px;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.submainDashAdvisor {
+  width: 30%; /* Adjust as needed */
+  margin: 10px; /* Adjust as needed */
+  text-align: center;
+}
+
+.uploadButton {
+  width: 50%;
+  height: 50px;
+  border-radius: 1rem;
+  font-size: larger;
+  font-weight: bold;
+  background-color: yellow;
+}

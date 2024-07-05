@@ -123,14 +123,10 @@ const Quiz = () => {
           <DialogContentText id="alert-dialog-description">
             Your Score of Quiz is: {score}/{shuffledQuestions.length} 
             <br />
-            Click below button for Suggested Advisor and Video Lecture Recommendation!!!
+            The Platform has Adapted to your needs. click below to start course
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={Advisor}>Advisor</Button>
-          <Button onClick={video} autoFocus>
-            Video Lecture
-          </Button>
           <Button onClick={dash} autoFocus>
             Subject Dashboard
           </Button>

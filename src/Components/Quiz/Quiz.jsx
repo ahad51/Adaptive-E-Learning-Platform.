@@ -75,13 +75,6 @@ const Quiz = () => {
 
   const navigate = useNavigate();
 
-  const Advisor = () => {
-    navigate('/advisor');
-  };
-
-  const video = () => {
-    navigate('/video');
-  };
 
   const dash = () => {
     navigate('/dashboard');

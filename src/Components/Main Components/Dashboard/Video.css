@@ -1,10 +1,10 @@
 .video-container {
-  display: flex;
-  justify-content: space-around !important;
-  align-items: center;
-  height: 200px; /* Adjust the height as needed */
-  padding-top: 40px;
   width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* align-items: center; */
 }
 .mainContainerVideo
 {
@@ -88,4 +88,18 @@ video {
 .react-calendar *:before,
 .react-calendar *:after {
   color: #faaf00 !important;
+}
+
+.yt-video{
+  height: 170px;
+  width: 300px;
+  position: relative;
+  margin: 0 5px;
+  margin-bottom: 20px;
+}
+
+.reactPlayer{
+  position: absolute;
+  top: 0;
+  left: 0;
 }

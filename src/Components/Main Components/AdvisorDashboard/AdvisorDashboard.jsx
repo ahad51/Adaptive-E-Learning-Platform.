@@ -25,7 +25,6 @@ import books from "../../../assets/images/books.png";
 import { PieChart } from "react-minimal-pie-chart";
 import { useNavigate } from "react-router-dom";
 import Video from "./Videoes";
-import Calendar from "./Calender";
 import AdvisorSts from "./AdvisorSts";
 import Rating from "@mui/material/Rating";
 
@@ -177,7 +176,6 @@ const Dashboard = () => {
                 )}
               </div>
             )}
-            {selectedItem === "Schedule" && <Calendar />}
             <input
               type="file"
               accept="video/*"

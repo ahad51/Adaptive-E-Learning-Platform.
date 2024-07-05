@@ -89,7 +89,7 @@ const Signup = () => {
         <div className="mainContainerSignup">
           <div className="subMainContainerLogin"></div>
           <div className="submainContainer">
-            <h1 className="login">Signup</h1>
+            <h1 className="login">Student Signup</h1>
             <label htmlFor="email" className="field-label">
               Name
             </label>

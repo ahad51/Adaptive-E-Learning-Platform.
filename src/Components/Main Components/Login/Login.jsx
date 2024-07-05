@@ -93,7 +93,7 @@ const Login = () => {
       <div className="mainContainerSignup">
         <div className="subMainContainerLogin"></div>
         <div className="submainContainer">
-          <h1 className="login">Login</h1>
+          <h1 className="login">Student Login</h1>
           <label htmlFor="email" className="field-labelEmail">Email</label>
           <TextField
             name="email"

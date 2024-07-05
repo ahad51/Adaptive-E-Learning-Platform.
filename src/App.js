@@ -8,8 +8,15 @@ import Courses from './Components/Main Components/Courses/Courses';
 import Question from './Components/Main Components/QuizQuestion/quizQuestion';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Quiz from './Components/Quiz/Quiz';
+import Video from './Components/Video Lecture/Video';
+import Advisor from './Components/Advisor/Advisor';
+import AdvisorDashboard from "./Components/Main Components/AdvisorDashboard/AdvisorDashboard"
+import AdvisorSts from "./Components/Main Components/AdvisorDashboard/AdvisorSts"
+
 
 function App() {
+  
   return (
     <Router>
     <Routes>
@@ -20,6 +27,11 @@ function App() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/courses" element={<Courses />} />
       <Route path="/question" element={<Question />} />
+      <Route path="/quiz" element={<Quiz />} />
+      <Route path="/video" element={<Video/>} />
+      <Route path="/advisor" element={<Advisor/>} />
+      <Route path="/advisorDashboard" element={<AdvisorDashboard/>} />
+      <Route path="/advisorSts" element={<AdvisorSts/>} />
       </Routes>
       </Router>
   );

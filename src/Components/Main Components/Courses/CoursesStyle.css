@@ -2,7 +2,8 @@
   background-image: url("../../../assets/images/bg-auth.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100% !important; /* Set the desired height for your background */
+  overflow-y: scroll;
+  height: 100vh !important;
 }
 .css-4z9bxz-MuiPaper-root {
   background-color: transparent !important ;
@@ -10,7 +11,7 @@
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
   color: lightgrey !important;
 }
-..css-1aquho2-MuiTabs-indicator {
+.css-1aquho2-MuiTabs-indicator {
   background-color: lightgray !important;
 }
 .css-15yhws9-MuiButtonBase-root-MuiTab-root.Mui-selected {
@@ -21,31 +22,27 @@
   background-color: lightgray !important;
 }
 .mainContainerTabs {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+  width: 80%;
   padding-top: 40px;
 }
 .coursesContainer {
   background-color: #1b1b1b;
-  width: 25%;
-  height: 250px;
-  border-bottom-right-radius: 8%;
-  border-bottom-left-radius: 8%;
+  height: 240px;
+  border-radius: 6%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  padding: 10px 0;
 }
 
 .poster {
-  height: 160px;
-  width: 100%;
+  height: 150px;
 }
 .majorContainerCourse {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+
 }
 .greyHead {
   color: lightgray !important;
@@ -96,8 +93,8 @@
   align-items: center;
   color: black;
   background-color: yellow;
-  width: 80px;
-  height: 30px;
+  width: 100px;
+  height: 40px;
   border-radius: 10%;
   border: none;
   cursor: pointer;

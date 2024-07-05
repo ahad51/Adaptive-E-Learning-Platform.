@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Dashboard.css";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -24,14 +24,19 @@ import advisor from "../../../assets/images/advisor.png";
 import books from "../../../assets/images/books.png";
 import { PieChart } from "react-minimal-pie-chart";
 import { useNavigate } from "react-router-dom";
-import Advisor from "../Dashboard/Advisor";
 import Video from "./Videoes";
 import Calendar from "./Calender";
+import AdvisorSts from "./AdvisorSts";
+import Rating from "@mui/material/Rating";
 
 const drawerWidth = 240;
 
 const Dashboard = () => {
-  const [selectedItem, setSelectedItem] = useState("Dashboard"); // Initialize with 'Dashboard'
+  const [value, setValue] = useState(4);
+  const [selectedItem, setSelectedItem] = useState("Dashboard");
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [videoURL, setVideoURL] = useState(null);
+  const fileInputRef = useRef(null);
 
   const icons = [
     dashboard,
@@ -43,13 +48,23 @@ const Dashboard = () => {
     courses,
   ];
 
-  // Function to handle item click
   const handleItemClick = (text) => {
     setSelectedItem(text);
   };
+
   const navigate = useNavigate();
   const navigation = () => {
     navigate("/");
+  };
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedFile(file);
+    setVideoURL(URL.createObjectURL(file));
+  };
+
+  const handleUploadClick = () => {
+    fileInputRef.current.click();
   };
 
   return (
@@ -90,11 +105,7 @@ const Dashboard = () => {
             <Toolbar />
             <Box sx={{ overflow: "auto", paddingTop: "30px" }}>
               <List>
-                {[
-                  "Dashboard",
-                  "Advisor",
-                  "Videos",
-                ].map((text, index) => (
+                {["Dashboard", "Students", "Videos"].map((text, index) => (
                   <ListItem key={text} disablePadding>
                     <ListItemButton
                       onClick={() => handleItemClick(text)}
@@ -123,54 +134,57 @@ const Dashboard = () => {
                 <div className="mainContainerdash">
                   <div className="submainDash">
                     <img src={advisor} className="clockicon" />
-                    <h1 className="advisor">Advisors</h1>
-                    <h1 className="advisor">5</h1>
+                    <h1 className="advisor">Your Rating</h1>
+                    <Box
+                      sx={{
+                        "& > legend": { mt: 2 },
+                      }}
+                    >
+                      <Rating
+                        name="simple-controlled"
+                        value={value}
+                        onChange={(event, newValue) => {
+                          setValue(newValue);
+                        }}
+                      />
+                    </Box>
                   </div>
                   <div className="submainDash">
                     <img src={books} className="clockicon" />
-                    <h1 className="advisor">Active Cources</h1>
-                    <h1 className="advisor">15</h1>
-                  </div>{" "}
+                    <h1 className="advisor">Your Course</h1>
+                    <h1 className="advisor">Javascript</h1>
+                    
+                  </div>
                   <div className="submainDash">
-                    <img src={clock} className="clockicon" />
-                    <h1 className="advisor">Time Spend</h1>
-                    <h1 className="advisor">6:00:54</h1>
-                  </div>
-                </div>
-                <div className="submainsecondash">
-                  <div className="donut">
-                    {" "}
-                    <div className="App">
-                      <h1 className="advisor">Course Progress</h1>
-                      <PieChart
-                        data={[
-                          { title: "Onesdsad", value: 2, color: "blue" },
-                          { title: "Onesdsad", value: 2, color: "yellow" },
-                          { title: "Two", value: 4, color: "green" },
-                          { title: "Three", value: 2, color: "pink" },
-                        ]}
-                        style={{ width: "250px", height: "250px" }}
-                      />
-                      ;
-                    </div>
-                  </div>
-                  <div className="table">
-                    <h1 className="advisor2">Course</h1>
-                    <h3 className="advisor2">Course Name : Python</h3>
-                    <hr className="hr" />
-                    <h3 className="advisor2">Course Name : Python</h3>
-                    <hr className="hr" />
-                    <h3 className="advisor2">Advisor Name : Umair Muneer</h3>
-                    <hr className="hr" />
-                    <h3 className="advisor2">Course Progress : Complete</h3>
-                    <hr className="hr" />
+                    <button onClick={handleUploadClick} className="uploadButton">
+                      Upload Video
+                    </button>
                   </div>
                 </div>
               </div>
             )}
-            {selectedItem === "Advisor" && <Advisor />}
-            {selectedItem === "Videos" && <Video />}
+            {selectedItem === "Students" && <AdvisorSts />}
+            {selectedItem === "Videos" && (
+              <div>
+                <Video />
+                {videoURL && (
+                  <div>
+                    <video width="400" controls>
+                      <source src={videoURL} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                )}
+              </div>
+            )}
             {selectedItem === "Schedule" && <Calendar />}
+            <input
+              type="file"
+              accept="video/*"
+              onChange={handleFileChange}
+              ref={fileInputRef}
+              style={{ display: "none" }}
+            />
           </Box>
         </Box>
       </div>

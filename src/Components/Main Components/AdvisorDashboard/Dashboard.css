@@ -15,7 +15,6 @@
   background-color: #1b1b1b !important;
 }
 
-
 .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
   background-color: #1b1b1b !important;
 }
@@ -39,21 +38,24 @@
   width: 30px;
   height: 30px;
 }
+
 .mainContainerdash {
   width: 100%;
   padding-top: 50px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   justify-content: space-around;
 }
+
 .mainContainerdashh {
   background-image: url("../../../assets/images/bg-auth.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-   
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
 
 .major {
@@ -135,14 +137,17 @@
   cursor: pointer;
 }
 
-.mainContainerdash {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .submainDashAdvisor {
   width: 30%; /* Adjust as needed */
   margin: 10px; /* Adjust as needed */
   text-align: center;
+}
+
+.uploadButton {
+  width: 50%;
+  height: 50px;
+  border-radius: 1rem;
+  font-size: larger;
+  font-weight: bold;
+  background-color: yellow;
 }

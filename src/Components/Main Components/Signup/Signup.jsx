@@ -10,12 +10,20 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { setToken } from "../../../utils/localstorage";
 import logo from "../../../assets/images/logo.png";
+import { postApiWithoutAuth } from "../../../utils/api";
+import { Url } from "../../../utils/apiUrls";
+import { useSnackbar } from "notistack";
+
 
 import "./Signup.css";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = React.useState(false);
+  const [userData, setUserData] = useState({ email: '', password: '',username:'' });
+  const { enqueueSnackbar } = useSnackbar();
+
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -29,6 +37,47 @@ const Signup = () => {
 
   const navigation = () => {
     Navigate("/");
+  };
+
+  const handleOnChange = (event) => {
+    const { name, value } = event.target;
+    setUserData({ ...userData, [name]: value });
+  };
+
+  const postData = async () => {
+    console.log('User Data:', userData);
+    try {
+      const response = await postApiWithoutAuth(Url.SIGNUP_UR, userData);
+      console.log("Response:", response);
+
+      if (response.success) {
+        Navigate('/');
+        enqueueSnackbar(('Signup Successfully'), {
+          anchorOrigin: {
+              horizontal: 'right',
+              vertical: 'top',
+          },
+          variant: 'success',
+      });
+        const { data: { is_active, access_token } } = response.data;
+        
+
+        if (is_active) {
+          setToken(access_token);
+        }
+      } else {
+        console.log('API call failed:', response.message);
+        enqueueSnackbar(('Email Already Exsist'), {
+          anchorOrigin: {
+              horizontal: 'right',
+              vertical: 'top',
+          },
+          variant: 'error',
+      });
+      }
+    } catch (error) {
+      console.log('Error during API call:', error);
+    }
   };
 
   return (
@@ -49,6 +98,8 @@ const Signup = () => {
               className="textField"
               id="outlined-basic"
               variant="outlined"
+              name="username"
+              onChange={handleOnChange}
             />
             <label htmlFor="email" className="field-labelEmail">
               Email
@@ -58,14 +109,19 @@ const Signup = () => {
               className="textField"
               id="outlined-basic"
               variant="outlined"
+              name="email"
+              onChange={handleOnChange
+              }
             />
             <label htmlFor="email" className="field-labelPassword">
               Password
             </label>
-            <FormControl sx={{ m: 1, width: "34ch" }} variant="outlined">
+            <FormControl sx={{ m: 1, width: "70%" }} variant="outlined">
               <OutlinedInput
                 id="outlined-adornment-password"
                 type={showPassword ? "text" : "password"}
+                name="password"
+                onChange={handleOnChange}
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
@@ -74,7 +130,7 @@ const Signup = () => {
                       onClick={handleClickShowPassword}
                       onMouseDown={handleMouseDownPassword}
                       edge="end"
-                      className="passwordPlace"
+                      className="passwordPlace" 
                     >
                       {showPassword ? <VisibilityOff /> : <Visibility />}
                     </IconButton>
@@ -83,7 +139,7 @@ const Signup = () => {
               />
             </FormControl>
             <div className="buttonContainer">
-              <Button className="authButton" onClick={navigation}>
+              <Button className="authButton" onClick={postData}>
                 Signup
               </Button>
               <div>

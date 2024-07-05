@@ -36,7 +36,7 @@ const Signup = () => {
   const Navigate = useNavigate();
 
   const navigation = () => {
-    Navigate("/");
+    Navigate("/AdvisorLogin");
   };
 
   const handleOnChange = (event) => {
@@ -112,6 +112,16 @@ const Signup = () => {
               name="email"
               onChange={handleOnChange
               }
+            />
+            <label htmlFor="experience" className="field-labelEmail">
+              Experience
+            </label>
+            <TextField
+              placeholder="Enter you Years Of Experience"
+              className="textField"
+              id="outlined-basic"
+              variant="outlined"
+              name="experience"
             />
             <label htmlFor="email" className="field-labelPassword">
               Password

@@ -86,6 +86,7 @@ const Courses = () => {
       <Paper square>
         <Tabs
           value={value}
+          
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"

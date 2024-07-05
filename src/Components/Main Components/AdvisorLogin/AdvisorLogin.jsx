@@ -40,7 +40,13 @@ const AdvisorLogin = () => {
       console.log("Response:", response);
 
       if (response.success) {
-        navigate('/courses');
+        if (userData.email == "test@test.com"){
+          navigate('/AdvisorDashboard');
+
+        }
+        else{
+          navigate('/AdvisorDashboardEmpty')
+        }
         enqueueSnackbar(('Login Successfully'), {
           anchorOrigin: {
               horizontal: 'right',

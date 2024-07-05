@@ -1,91 +1,21 @@
 .video-container {
-  display: flex;
-  justify-content: space-around !important;
-  align-items: center;
-  height: 200px; /* Adjust the height as needed */
-  padding-top: 40px;
   width: 100%;
-}
-.mainContainerVideo
-{
-  background-image: url("../../../assets/images/bg-auth.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-
- 
-}
-
-video {
-  max-width: 100%;
-  max-height: 100%;
-  border: 2px solid #333;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-.mainContainerQuiz {
+  height: 85vh;
   display: flex;
-  flex-direction: column;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+  /* align-items: center; */
 }
-
-.firstContainer {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding-top: 60px;
-}
-.submainDashVideo {
-  background-color: #1b1b1b;
-  width: 35%;
-  height: 200px !important;
-  border-radius: 7%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.advisorQuiz {
-  color: lightgray;
-  font-size: 20px;
+.yt-video{
+  height: 170px;
+  width: 300px;
+  position: relative;
+  margin: 0 5px;
   margin-bottom: 20px;
 }
-.quizProgress {
-  background-color: #faaf00;
-  width: 200px;
-  height: 40px;
-  margin-top: 20px;
-  border-radius: 10px 10px 10px 10px;
-  border: none;
-  font-size: 18px;
-  font-weight: bolder;
-}
-.clockicon2 {
-  width: 40px;
-  height: 40px;
-}
-.calender {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-items: center;
-  padding-top: 200px;
-}
-.calenderStyle {
-  width: 80% !important;
-  height: 80% !important;
-  background-color: #1b1b1b !important;
-  color: #faaf00 !important;
-}
-.react-calendar__tile {
-  color: #faaf00 !important;
-}
-.react-calendar__tile--now {
-  background-color: blue !important  ;
-}
-.react-calendar,
-.react-calendar *,
-.react-calendar *:before,
-.react-calendar *:after {
-  color: #faaf00 !important;
+
+.reactPlayer{
+  position: absolute;
+  top: 0;
+  left: 0;
 }

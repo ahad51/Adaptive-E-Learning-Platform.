@@ -11,7 +11,7 @@ import { useSnackbar } from "notistack";
 
 import "./Login.css";
 
-const Login = () => {
+const AdvisorLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [errorText, setErrorText] = useState('');
   const [userData, setUserData] = useState({ email: '', password: '' });
@@ -68,11 +68,12 @@ const Login = () => {
     }
   };
 
-  const navigation = () => {
-    navigate("/signup")
+  const studentLoginRoute = () => {
+    navigate("/")
   }
-  const navigational = () => {
-    navigate("/AdvisorLogin")
+
+  const navigation = () => {
+    navigate("/AdvisorSignup")
   }
 
   const navigationForget = () => {
@@ -93,7 +94,7 @@ const Login = () => {
       <div className="mainContainerSignup">
         <div className="subMainContainerLogin"></div>
         <div className="submainContainer">
-          <h1 className="login">Login</h1>
+          <h1 className="login">Advisor Login</h1>
           <label htmlFor="email" className="field-labelEmail">Email</label>
           <TextField
             name="email"
@@ -138,8 +139,8 @@ const Login = () => {
                 </a>
               </h5>
               <h5 className="bottomHeadingLogin">
-                Are you an advisor?{" "}
-                <a onClick={navigational} className="link">
+                Are you a Student?{" "}
+                <a onClick={studentLoginRoute} className="link">
                   Click Here!
                 </a>
               </h5>
@@ -152,4 +153,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default AdvisorLogin;

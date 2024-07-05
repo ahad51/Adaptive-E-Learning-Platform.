@@ -15,6 +15,7 @@ import AdvisorDashboard from "./Components/Main Components/AdvisorDashboard/Advi
 import AdvisorSts from "./Components/Main Components/AdvisorDashboard/AdvisorSts"
 import AdvisorLogin from './Components/Main Components/AdvisorLogin/AdvisorLogin';
 import AdvisorDashboardEmpty from "./Components/Main Components/AdvisorDashboardEmpty/AdvisorDashboardEmpty"
+import AdvisorSignup from "./Components/Main Components/AdvisorSignup/AdvisorSignup"
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       <Route path="/advisorSts" element={<AdvisorSts/>} />
       <Route path="/advisorLogin" element={<AdvisorLogin/>} />
       <Route path="/AdvisorDashboardEmpty" element={<AdvisorDashboardEmpty/>} />
+      <Route path="/AdvisorSignup" element={<AdvisorSignup/>} />
 
       </Routes>
       </Router>

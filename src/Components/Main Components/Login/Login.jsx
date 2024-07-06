@@ -69,7 +69,7 @@ const Login = () => {
   // };
 
   const postData = () => {
-    navigate("/Dashboard")
+    navigate("/Courses")
   }
 
   const navigation = () => {

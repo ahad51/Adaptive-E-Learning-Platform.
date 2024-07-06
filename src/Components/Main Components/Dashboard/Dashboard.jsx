@@ -124,18 +124,10 @@ const Dashboard = () => {
                   <div className="submainDash">
                     <img src={advisor} className="clockicon" />
                     <h1 className="advisor">Advisors</h1>
-                    <h1 className="advisor">5</h1>
+                    <h1 className="advisor">1</h1>
                   </div>
-                  <div className="submainDash">
-                    <img src={books} className="clockicon" />
-                    <h1 className="advisor">Active Cources</h1>
-                    <h1 className="advisor">15</h1>
-                  </div>{" "}
-                  <div className="submainDash">
-                    <img src={clock} className="clockicon" />
-                    <h1 className="advisor">Time Spend</h1>
-                    <h1 className="advisor">6:00:54</h1>
-                  </div>
+
+                 
                 </div>
                 <div className="submainsecondash">
                   <div className="donut">
@@ -156,13 +148,12 @@ const Dashboard = () => {
                   </div>
                   <div className="table">
                     <h1 className="advisor2">Course</h1>
-                    <h3 className="advisor2">Course Name : Python</h3>
                     <hr className="hr" />
-                    <h3 className="advisor2">Course Name : Python</h3>
+                    <h3 className="advisor2">Course Name : Javascript</h3>
                     <hr className="hr" />
-                    <h3 className="advisor2">Advisor Name : Umair Muneer</h3>
+                    <h3 className="advisor2">Advisor Name : Test</h3>
                     <hr className="hr" />
-                    <h3 className="advisor2">Course Progress : Complete</h3>
+                    <h3 className="advisor2">Course Progress :In Progress</h3>
                     <hr className="hr" />
                   </div>
                 </div>

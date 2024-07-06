@@ -148,13 +148,12 @@ const Dashboard = () => {
                   </div>
                   <div className="table">
                     <h1 className="advisor2">Course</h1>
-                    <h3 className="advisor2">Course Name : Python</h3>
                     <hr className="hr" />
-                    <h3 className="advisor2">Course Name : Python</h3>
+                    <h3 className="advisor2">Course Name : Javascript</h3>
                     <hr className="hr" />
-                    <h3 className="advisor2">Advisor Name : Umair Muneer</h3>
+                    <h3 className="advisor2">Advisor Name : Test</h3>
                     <hr className="hr" />
-                    <h3 className="advisor2">Course Progress : Complete</h3>
+                    <h3 className="advisor2">Course Progress :In Progress</h3>
                     <hr className="hr" />
                   </div>
                 </div>

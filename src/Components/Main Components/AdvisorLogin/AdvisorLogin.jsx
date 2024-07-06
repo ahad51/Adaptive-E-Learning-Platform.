@@ -38,7 +38,6 @@ const AdvisorLogin = () => {
   //   try {
   //     const response = await postApiWithoutAuth(Url.LOGIN_URL, userData);
   //     console.log("Response:", response);
-
   //     if (response.success) {
   //       navigate('/courses');
   //       enqueueSnackbar(('Login Successfully'), {
@@ -49,6 +48,23 @@ const AdvisorLogin = () => {
   //         variant: 'success',
   //     });
   //       const { data: { is_active, access_token } } = response.data;
+//       if (response.success) {
+//         if (userData.email == "test@test.com"){
+//           navigate('/AdvisorDashboard');
+
+//         }
+//         else{
+//           navigate('/AdvisorDashboardEmpty')
+//         }
+//         enqueueSnackbar(('Login Successfully'), {
+//           anchorOrigin: {
+//               horizontal: 'right',
+//               vertical: 'top',
+//           },
+//           variant: 'success',
+//       });
+//         const { data: { is_active, access_token } } = response.data;
+
         
   //       if (is_active) {
   //         setToken(access_token);

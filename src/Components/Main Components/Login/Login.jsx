@@ -68,9 +68,8 @@ const Login = () => {
   //   }
   // };
 
-  const postData=()=>
-  {
-    navigate('/courses')
+  const postData = () => {
+    navigate("/Courses")
   }
 
   const navigation = () => {

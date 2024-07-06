@@ -53,7 +53,7 @@ const Dashboard = () => {
 
   const navigate = useNavigate();
   const navigation = () => {
-    navigate("/");
+    navigate("/AdvisorLogin");
   };
 
   const handleFileChange = (event) => {

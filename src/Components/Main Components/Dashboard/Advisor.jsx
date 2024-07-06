@@ -11,12 +11,7 @@ const Advisor = () => {
 
   // Sample data array containing advisor information
   const advisorData = [
-    { id: 1, name: "Ahad" },
-    { id: 2, name: "Faizan" },
-    { id: 3, name: "Umair" },
-    { id: 3, name: "Shalina" },
-    { id: 3, name: "Jane" },
-    { id: 1, name: "Ahad" },
+    { id: 1, name: "Test" },
 
   ];
 

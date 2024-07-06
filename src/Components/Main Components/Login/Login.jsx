@@ -33,40 +33,44 @@ const Login = () => {
     }
   };
 
-  const postData = async () => {
-    console.log('User Data:', userData);
-    try {
-      const response = await postApiWithoutAuth(Url.LOGIN_URL, userData);
-      console.log("Response:", response);
+  // const postData = async () => {
+  //   console.log('User Data:', userData);
+  //   try {
+  //     const response = await postApiWithoutAuth(Url.LOGIN_URL, userData);
+  //     console.log("Response:", response);
 
-      if (response.success) {
-        navigate('/courses');
-        enqueueSnackbar(('Login Successfully'), {
-          anchorOrigin: {
-              horizontal: 'right',
-              vertical: 'top',
-          },
-          variant: 'success',
-      });
-        const { data: { is_active, access_token } } = response.data;
+  //     if (response.success) {
+  //       navigate('/courses');
+  //       enqueueSnackbar(('Login Successfully'), {
+  //         anchorOrigin: {
+  //             horizontal: 'right',
+  //             vertical: 'top',
+  //         },
+  //         variant: 'success',
+  //     });
+  //       const { data: { is_active, access_token } } = response.data;
         
-        if (is_active) {
-          setToken(access_token);
-        }
-      } else {
-        console.log('API call failed:', response.message);
-        enqueueSnackbar(('Invalid Cridentials'), {
-          anchorOrigin: {
-              horizontal: 'right',
-              vertical: 'top',
-          },
-          variant: 'error',
-      });
-      }
-    } catch (error) {
-      console.log('Error during API call:', error);
-    }
-  };
+  //       if (is_active) {
+  //         setToken(access_token);
+  //       }
+  //     } else {
+  //       console.log('API call failed:', response.message);
+  //       enqueueSnackbar(('Invalid Cridentials'), {
+  //         anchorOrigin: {
+  //             horizontal: 'right',
+  //             vertical: 'top',
+  //         },
+  //         variant: 'error',
+  //     });
+  //     }
+  //   } catch (error) {
+  //     console.log('Error during API call:', error);
+  //   }
+  // };
+
+  const postData = () => {
+    navigate("/Dashboard")
+  }
 
   const navigation = () => {
     navigate("/signup")

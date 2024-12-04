@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import advisor from "../../../assets/images/advisor.png";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
@@ -8,24 +8,30 @@ import "./Dashboard.css";
 
 const Advisor = () => {
   const [value, setValue] = useState(4);
+  const [randomAdvisor, setRandomAdvisor] = useState(null);
 
   // Sample data array containing advisor information
   const advisorData = [
-    { id: 1, name: "Ahad" },
-    { id: 2, name: "Faizan" },
-    { id: 3, name: "Umair" },
-    { id: 3, name: "Shalina" },
-    { id: 3, name: "Jane" },
-    { id: 1, name: "Ahad" },
-
+    { id: 1, name: "Test" },
   ];
+
+  // Function to generate random index
+  const getRandomIndex = () => {
+    return Math.floor(Math.random() * advisorData.length);
+  };
+
+  useEffect(() => {
+    // Set initial random advisor on component mount
+    const randomIndex = getRandomIndex();
+    setRandomAdvisor(advisorData[randomIndex]);
+  }, []);
 
   return (
     <div className="mainContainerdash">
-      {advisorData.map((advisor) => (
-        <div className="submainDashAdvisor" key={advisor.id}>
-          <img src={dp} className="clockicon" />
-          <h1 className="advisor">{advisor.name}</h1>
+      {randomAdvisor && (
+        <div className="submainDashAdvisor" key={randomAdvisor.id}>
+          <img src={dp} className="clockicon" alt="Advisor" />
+          <h1 className="advisor">{randomAdvisor.name}</h1>
           <Box
             sx={{
               "& > legend": { mt: 2 },
@@ -41,7 +47,7 @@ const Advisor = () => {
           </Box>
           <button className="advisorButton">Connect</button>
         </div>
-      ))}
+      )}
     </div>
   );
 };
